@@ -87,4 +87,4 @@ Incluye la breve descripción de la foto astronómica junto con su título.
 
 Las opciones "Sistema Solar", "Noticias" e "Invítame a un café" estarán deshabilitadas y no serámostrarán en el MVP.
 Se desplegará un Toast con mensaje en la interfaz para indicar que estas opciones estarán disponibles en futuras versiones.
-Si bien la app está pensada para abanrcar el mayor número de idiomas posibles, para este MVP, la app estará disponible solo en inglés.
+Si bien la app está pensada para abarcar el mayor número de idiomas posibles, para este MVP, la app estará disponible únicamente en inglés.
