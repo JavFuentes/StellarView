@@ -29,14 +29,14 @@
 
 ## Problemáticas organizadas en clústers 📍
 
-### Cluster 1: Acceso y recursos educativos
+### Clúster 1: Acceso y recursos educativos
 
 1. Falta de acceso a recursos educativos sobre astronomía en comunidades desfavorecidas.
 2. Limitaciones en la disponibilidad de telescopios y equipos astronómicos para uso educativo.
 3. Barreras culturales y lingüísticas que dificultan el acceso a la educación astronómica para comunidades minoritarias.
 <br>
 
-### Cluster 2: Educación y divulgación
+### Clúster 2: Educación y divulgación
 
 1. Escasa presencia de la astronomía en los programas educativos formales.
 2. Desconocimiento generalizado de los avances científicos y descubrimientos en el campo de la astronomía.
@@ -45,7 +45,7 @@
 5. Inexistencia de programas de formación y capacitación docente en astronomía para educadores.
 <br>
 
-### Cluster 3: Interés y motivación
+### Clúster 3: Interés y motivación
 
 1. Desinterés y falta de motivación de los estudiantes hacia la ciencia y la astronomía.
 2. Dificultad para comprender conceptos astronómicos complejos debido a la falta de explicaciones claras y accesibles.
@@ -54,7 +54,7 @@
 5. Escaso enfoque en la astronomía como una carrera viable y emocionante en las opciones educativas y profesionales.
 <br>
 
-### Cluster 4: Observación y divulgación
+### Clúster 4: Observación y divulgación
 
 1. Dificultad para organizar y participar en eventos de observación astronómica debido a la falta de infraestructura adecuada.
 2. Falta de conciencia sobre el impacto humano en el medio ambiente astronómico, como la contaminación lumínica.
