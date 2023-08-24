@@ -1,5 +1,5 @@
 # StellarView 🌌
-"Stellar View" es un proyecto enfocado en promover el interés en la educación astronómica. Será desarrollada en Jetpack Compose y permite a usuarios explorar fotografías impactantes de cuerpos celestes con breves descripciones. Únete a este viaje cósmico y despierta tu curiosidad por las maravillas del espacio. ¡El cosmos espera ser descubierto!"
+"Stellar View" es una app enfocada en promover el interés en la educación astronómica. 
 
 ## Story Telling: Vista Estelar 🔭
 <p>“Vivimos en una sociedad profundamente dependiente de la ciencia y la tecnología, y en la que nadie sabe nada de estos temas”. Esta frase del gran astrónomo, Carl Sagan, habla de un problema que solo se ha agudizado en los últimos años, y ahora de forma exponencial, debido a la revolución de las inteligencias artificiales, que son “cajas negras” que nos dan información, pero no sabemos cómo lo hacen; en este contexo, es fundamental fomentar el interés en la educación científica y permitir que personas de todas las edades y en cualquier parte del mundo puedan explorar y maravillarse con los nuevos descubrimientos y avances tecnológicos, y ¿qué mejor punto de entrada que en un campo tan asombroso como la astronomía?</p>
@@ -62,7 +62,7 @@
 4. Dificultad para acceder a información actualizada y precisa sobre descubrimientos y avances científicos en astronomía.
 <br>
 
-## MVP a desarrollar para próxima entrega (27 de mayo de 2023) 💪
+## MVP a desarrollar para próxima entrega (28 de junio de 2023) 💪
 
 ### Splash screen:
 

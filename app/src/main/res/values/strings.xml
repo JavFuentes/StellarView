@@ -1,3 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">StellarView</string>
+    <string name="app_name">Stellar View</string>
+    <string name="home">Home</string>
+    <string name="refresh">Refresh</string>
+    <string name="favorites">Favorite Pictures</string>
+    <string name="detail">Description</string>
+    <string name="settings">Settings</string>
+    <string name="apod">Picture of the day</string>
+    <string name="today_astronomical_picture">Loading...</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="select_apod_date">Select Date</string>
+    <string name="remove_from_favorites">Delete</string>
+    <string name="select_mode">Select Mode</string>
+    <string name="dark_mode_settings">Dark Mode</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="apod_drawer">Picture Of The Day</string>
+    <string name="trivia_drawer">Astronomy Trivia</string>
+    <string name="news_drawer">News</string>
+    <string name="spacial_weather_drawer">Spacial Weather</string>
+    <string name="selected_date_textview">2023-07-28</string>
+    <string name="contetnt_image_today_apod">Image Today APOD</string>
+    <string name="astromony_picture_of_day_img_content_adapter">Astromony picture of day</string>
+    <string name="splash_screen_img_content">Splash Screen</string>
+    <string name="category_1">Solar System</string>
+    <string name="category_2"><![CDATA[Stars & Constellations]]></string>
+    <string name="category_3"><![CDATA[Galaxies & Nebulae]]></string>
+    <string name="category_4">Astronomical Events</string>
+    <string name="category_5">History</string>
+    <string name="category_6">Space Exploration</string>
+
+    <string name="category_1_img_content">Category 1</string>
+    <string name="category_4_img_content">Category 4</string>
+    <string name="category_2_img_content">Category 2</string>
+    <string name="category_3_img_content">Category 3</string>
+    <string name="category_5_img_content">Category 5</string>
+    <string name="category_6_img_content">Category 6</string>
+
+    <string name="trivia_categories_title">Trivia Categories</string>
+    <string name="settings_title">Settings</string>
+    <string name="picture_of_day_title">Picture Of The Day</string>
+    <string name="photo_details_title">Photo Details</string>
+    <string name="favorites_title">Favorite Pictures</string>
+    <string name="date_tv_adapter">Date</string>
+    <string name="title_tv_adapter">Title</string>
+    <string name="one_day_ago_settings">One Day Ago</string>
+    <string name="trivia_categories_title_label">Trivia Categories</string>
+    <string name="trivia_title_label">Trivia</string>
+    <string name="language_settings">Language</string>
+    <string name="local_db_error_alert">Error in the local database connection</string>
+    <string name="coming_soon_alert">Coming soon</string>
+    <string name="successfully_added_alert">Successfully added</string>
+    <string name="photo_deleted_alert">Photo deleted</string>
+    <string name="undo_action">UNDO</string>
+
+    <string name="category_6_master_level">category 6 master level</string>
+    <string name="category_5_master_level">category 5 master level</string>
+    <string name="category_4_master_level">category 4 master level</string>
+    <string name="category_3_master_level">category 3 master level</string>
+    <string name="category_2_master_level">category 2 master level</string>
+    <string name="category_1_master_level">category 1 master level</string>
+    <string name="question_label">Question</string>
+    <string name="max_questions_label">/\u0020\u0020 10</string>
+    <string name="return_to_categories">Categories</string>
+    <string name="try_again">Try Again</string>
+    <string name="tv_result">"Score:"</string>
+    <string name="star_reward_img_content">Star earned as award</string>
+    <string name="title_home">Stellar View</string>
+    <string name="title_favorites">Favorite Pictures</string>
+    <string name="title_astronomical_trivia">Astronomy Trivia</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_details">Details</string>
+    <string name="title_apod">Picture Of The Day</string>
+    <string name="astronomy_trivia_banner_title">Astronomy Trivia</string>
+
+    <string name="help_one_day_ago_message">Due to the location of the International Date Line, countries and territories to the west of this line (in the Western Pacific region) experience a new day before the United States. These places include, but are not limited to:\n\nNew Zealand, Australia, Fiji, Tonga, Samoa, Kiribati Islands and part of Antarctica that falls within the corresponding time zone (UTC+13 and UTC+14)\n\nDue to Earth\'s rotation, these places enter a new day earlier than the United States and most other countries in the world. However, time changes due to daylight saving time and other considerations may affect this list, which will result in an error when querying the photo of the day that has not yet arrived.\n\nIf you encounter a 404 error when trying to load the photo of the day, consider enabling this option, which will subtract one day from the current date..</string>
+    <string name="one_day_ago_alert_dialog">One Day Ago</string>
+    <string name="ok_alert_dialog">OK</string>
+    <string name="go_trivia_img_content">Go to trivia</string>
+    <string name="tv_score">10/10</string>
+    <string name="tv_quotes">Here, inspiring quotes related to science will be displayed.</string>
+    <string name="home_drawer">Home</string>
+    <string name="news_img_content">News</string>
+    <string name="cv_news_title">Alert: Global Boiling</string>
+    <string name="apod_description">The Astronomy Picture of the Day (APOD) is a website jointly maintained by NASA and the Michigan Technological University.\n\nAccording to the information on the website, since 1995 a different image or photograph of the universe has been presented each day, accompanied by a brief explanation written by a professional astronomer.\n\nHere you have the opportunity to explore all the images published up to today.</string>
+    <string name="apod_help_title">APOD</string>
+    <string name="dialog_rate_title">Did you enjoy Stellar View?</string>
+    <string name="dialog_rate_text">Please consider rating the app on the Play Store</string>
+    <string name="dialog_rate_now">Rate now</string>
+    <string name="dialog_rate_later">Later</string>
+
+    <!-- Quotes  -->
+    <string-array name="scientific_quotes">
+        <item>\"Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.\" - Marie Curie</item>
+        <item>\"I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.\" - Isaac Newton</item>
+        <item>\"Be humble for you are made of earth. Be noble for you are made of stars.\" - Serbian Proverb</item>
+        <item>\"What we know is a drop, what we don\'t know is an ocean." - Isaac Newton</item>
+        <item>\"Science progresses best when observations force us to alter our preconceptions.\" - Vera Rubin</item>
+        <item>\"I have loved the stars too fondly to be fearful of the night.\" - Galileo Galilei</item>
+        <item>\"Men love to wonder, and that is the seed of science.\" - Ralph Waldo Emerson</item>
+        <item>\"Equipped with his five senses, man explores the universe around him and calls the adventure Science.\" - Edwin Hubble</item>
+        <item>\"Every sentence I utter must be understood not as an affirmation, but as a question.\" - Neils Bohr</item>
+        <item>\"The noblest pleasure is the joy of understanding.\" - Leonardo Da Vinci</item>
+        <item>\"The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.\" - Isaac Asimov</item>
+        <item>\"The sacred truth of science is that there are no sacred.\" - Carl Sagan</item>
+        <item>\"Apollo, the god of medicine, used to send diseases. In the beginning, the two offices were one, and it remains so.\" - Anonymous</item>
+        <item>\"Science is an enterprise that can only flourish if it puts the truth ahead of nationality, ethnicity, class and color.\" - John C. Polanyi</item>
+        <item>\"Science that departs from justice, more than science should be called cunning.\" - Cicero</item>
+        <item>\"In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual.\" - Galileo Galilei</item>
+        <item>\"The only way of discovering the limits of the possible is to venture a little way past them into the impossible.\" - Arthur C. Clarke</item>
+        <item>\"Self-education is, I firmly believe, the only kind of education there is.\" - Isaac Asimov</item>
+        <item>\"Not explaining science seems to me perverse. When you\'re in love, you want to tell the world.\" - Carl Sagan</item>
+        <item>\"Every kid starts out as a natural-born scientist, and then we beat it out of them. A few trickle through the system with their wonder and enthusiasm for science intact.\" - Carl Sagan</item>
+        <item>\"We live in a society absolutely dependent on science and technology and yet have cleverly arranged things so that almost no one understands science and technology. That’s a clear prescription for disaster.\" - Carl Sagan</item>
+        <item>\"Imagination will often carry us to worlds that never were. But without it we go nowhere.\" - Carl Sagan</item>
+        <item>\"The aim of science is not to open the door to infinite wisdom, but to set a limit to infinite error.\" - Galileo Galilei</item>
+        <item>\"Ignorance is the mother of all evils.\" - Galileo Galilei</item>
+        <item>\"The greatest wisdom is to get to know oneself.\" - Galileo Galilei</item>
+        <item>\"I have never met a man so ignorant that I could not learn something from him.\" - Galileo Galilei</item>
+        <item>\"Be less curious about people and more curious about ideas.\" - Marie Curie</item>
+        <item>\"No brain is in good shape without a constant goal.\" - Rita Levi-Montalcini</item>
+        <item>\"History of science shows us that scientific theories are perishable.\" - Nikola Tesla</item>
+    </string-array>
+
+    <string name='onu_statement'>The UN\'s statement on the shift from \"global warming\" to \"global boiling\" suggests an intensification and acceleration of the effects of climate change.</string>
+    <string name="introduction">"Global boiling" in a climate context indicates a critical point that precedes extreme and devastating climatic events. Despite efforts to reduce greenhouse gas emissions, they continue to rise, exacerbating phenomena such as heatwaves, floods, and wildfires.\n\nThese events not only harm nature but also impact society in terms of health, infrastructure, and the economy. Faced with this crisis, global action focused on mitigation and adaptation is essential to ensure a sustainable future.</string>
+    <string name="content1">Climate change, intensified by human actions such as burning fossil fuels, is a central concern in contemporary science. There are various sources that confirm its existence and severity. Among the most prominent are the IPCC Report, the research from NOAA and NASA, and various reports from organizations like the WMO and the U.S. National Academy of Sciences. \n\nThese sources, along with scientific articles and NGOs, provide vast information and evidence about this phenomenon. </string>
+    <string name="content2">The fight against global warming requires both collective and individual efforts. Collectively, it is vital to implement emission reduction policies, invest in renewable energies, promote energy efficiency, and encourage reforestation and sustainable agricultural practices. Education and research into climate solutions are also essential. \n\nIndividually, we can contribute by reducing, reusing, recycling, using energy and water efficiently, opting for sustainable transportation, reducing meat consumption, especially beef, supporting green policies and businesses, and participating in reforestation. Every action adds to the global effort for a more sustainable future.</string>
+    <string name="news_title">Alert: Global Boiling</string>
+    <string name="news_subtitle2">"Some people believe that climate change is not real or that humans are not directly responsible</string>
+    <string name="news_subtitle3">We must take action!</string>
+    <string name="new_img_content">An image of a kettle shaped like the Earth.</string>
+    <string name="news_autor">Javier Fuentes \n\n2023-08-08\u0020</string>
+
 </resources>
