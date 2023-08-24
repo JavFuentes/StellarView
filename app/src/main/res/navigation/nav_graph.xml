@@ -1,0 +1,90 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/triviaGameFragment"
+        android:name="com.astronomy.stellar_view.ui.trivia.TriviaGameFragment"
+        tools:layout="@layout/fragment_game_trivia" >
+        <action
+            android:id="@+id/action_triviaGameFragment_to_triviaResultFragment"
+            app:destination="@id/triviaResultFragment" />
+        <action
+            android:id="@+id/action_triviaGameFragment_to_triviaCategoriesFragment"
+            app:destination="@id/triviaCategoriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/triviaResultFragment"
+        android:name="com.astronomy.stellar_view.ui.trivia.TriviaResultFragment" >
+        <action
+            android:id="@+id/action_triviaResultFragment_to_triviaGameFragment"
+            app:destination="@id/triviaGameFragment" />
+        <action
+            android:id="@+id/action_triviaResultFragment_to_triviaCategoriesFragment"
+            app:destination="@id/triviaCategoriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/triviaCategoriesFragment"
+        android:name="com.astronomy.stellar_view.ui.trivia.TriviaCategoriesFragment" >
+        <action
+            android:id="@+id/action_triviaCategoriesFragment_to_triviaGameFragment"
+            app:destination="@id/triviaGameFragment" />
+        <action
+            android:id="@+id/action_triviaCategoriesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apodFragment"
+        android:name="com.astronomy.stellar_view.ui.home.ApodFragment"
+        android:label="ApodFragment" >
+        <action
+            android:id="@+id/action_apodFragment_to_pictureOfDayFragment"
+            app:destination="@id/pictureOfDayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureOfDayFragment"
+        android:name="com.astronomy.stellar_view.ui.home.details.PictureOfDayFragment"
+        android:label="fragment_picture_of_day"
+        tools:layout="@layout/fragment_picture_of_day" >
+        <action
+            android:id="@+id/action_pictureOfDayFragment_to_apodFragment"
+            app:destination="@id/apodFragment" />
+        <action
+            android:id="@+id/action_pictureOfDayFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.astronomy.stellar_view.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.astronomy.stellar_view.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.astronomy.stellar_view.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_pictureOfDayFragment"
+            app:destination="@id/pictureOfDayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_triviaCategoriesFragment"
+            app:destination="@id/triviaCategoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.astronomy.stellar_view.ui.NewsFragment"
+        android:label="NewsFragment" />
+
+</navigation>

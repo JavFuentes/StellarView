@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_drawer_home"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home_drawer" />
+        <item
+            android:id="@+id/nav_drawer_trivia"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_trivia"
+            android:title="@string/trivia_drawer" />
+        <item
+            android:id="@+id/nav_drawer_apod"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_apod"
+            android:title="@string/apod_drawer" />
+
+        <item
+            android:id="@+id/nav_drawer_favorites"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/favorites" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_drawer_news"-->
+<!--            android:fontFamily="@font/romanica"-->
+<!--            android:icon="@drawable/ic_news"-->
+<!--            android:title="@string/news_drawer" />-->
+
+        <item
+            android:id="@+id/nav_drawer_spacial_weather"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_spacial_weather"
+            android:title="@string/spacial_weather_drawer" />
+        <item
+            android:id="@+id/nav_drawer_settings"
+            android:fontFamily="@font/romanica"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>
