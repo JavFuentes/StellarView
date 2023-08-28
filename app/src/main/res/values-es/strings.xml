@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stellar View</string>
+    <string name="home">Inicio</string>
+    <string name="refresh">Actualizar</string>
+    <string name="favorites">Imágenes Favoritas</string>
+    <string name="detail">Descripción</string>
+    <string name="settings">Configuración</string>
+    <string name="apod">Imagen del Día</string>
+    <string name="today_astronomical_picture">Cargando...</string>
+    <string name="add_to_favorites">Agregar a Favoritos</string>
+    <string name="select_apod_date">Seleccionar Fecha</string>
+    <string name="remove_from_favorites">Eliminar</string>
+    <string name="select_mode">Seleccionar Modo</string>
+    <string name="dark_mode_settings">Modo Oscuro</string>
+    <string name="navigation_drawer_open">Abrir cajón de navegación</string>
+    <string name="navigation_drawer_close">Cerrar cajón de navegación</string>
+    <string name="apod_drawer">Imagen del Día</string>
+    <string name="trivia_drawer">Trivia Astronómica</string>
+    <string name="news_drawer">Noticias</string>
+    <string name="spacial_weather_drawer">Clima Espacial</string>
+    <string name="selected_date_textview">2023-07-28</string>
+    <string name="contetnt_image_today_apod">Imagen del APOD de Hoy</string>
+    <string name="astromony_picture_of_day_img_content_adapter">Imagen astronómica del día</string>
+    <string name="splash_screen_img_content">Pantalla de Inicio</string>
+    <string name="category_1">Sistema Solar</string>
+    <string name="category_2"><![CDATA[Estrellas & Constelaciones]]></string>
+    <string name="category_3"><![CDATA[Galaxias & Nebulosas]]></string>
+    <string name="category_4">Eventos Astronómicos</string>
+    <string name="category_5">Historia</string>
+    <string name="category_6">Exploración Espacial</string>
+
+    <string name="category_1_img_content">Categoría 1</string>
+    <string name="category_4_img_content">Categoría 4</string>
+    <string name="category_2_img_content">Categoría 2</string>
+    <string name="category_3_img_content">Categoría 3</string>
+    <string name="category_5_img_content">Categoría 5</string>
+    <string name="category_6_img_content">Categoría 6</string>
+
+    <string name="trivia_categories_title">Categorías</string>
+    <string name="settings_title">Configuraciones</string>
+    <string name="picture_of_day_title">Imagen del Día</string>
+    <string name="photo_details_title">Detalles</string>
+    <string name="favorites_title">Imágenes Favoritas</string>
+    <string name="date_tv_adapter">Fecha</string>
+    <string name="title_tv_adapter">Título</string>
+    <string name="one_day_ago_settings">Un Día Atrás</string>
+    <string name="trivia_categories_title_label">Categorías</string>
+    <string name="trivia_title_label">Trivia Astronómica</string>
+    <string name="language_settings">Idioma</string>
+    <string name="local_db_error_alert">Error en la conexión con la base de datos local</string>
+    <string name="coming_soon_alert">Proximamente</string>
+    <string name="successfully_added_alert">Agregado exitosamente</string>
+    <string name="photo_deleted_alert">Imagen eliminada</string>
+    <string name="undo_action">Deshacer</string>
+
+    <string name="category_6_master_level">nivel de maestria en la categoría 6</string>
+    <string name="category_5_master_level">nivel de maestria en la categoría 5</string>
+    <string name="category_4_master_level">nivel de maestria en la categoría 4</string>
+    <string name="category_3_master_level">nivel de maestria en la categoría 3</string>
+    <string name="category_2_master_level">nivel de maestria en la categoría 2</string>
+    <string name="category_1_master_level">nivel de maestria en la categoría 1</string>
+    <string name="max_questions_label">/\u0020\u0020 10</string>
+    <string name="question_label">Pregunta</string>
+    <string name="return_to_categories">Categorías</string>
+    <string name="try_again">Volver a intentar</string>
+    <string name="tv_result">"Puntuación:"</string>
+    <string name="star_reward_img_content">Estrella obtenida como premio</string>
+    <string name="title_home">Stellar View</string>
+    <string name="title_favorites">Imágenes Favoritas</string>
+    <string name="title_astronomical_trivia">Trivia Astronómica</string>
+    <string name="title_settings">Configuración</string>
+    <string name="title_details">Detalles</string>
+    <string name="title_apod">Imagen del Día</string>
+    <string name="astronomy_trivia_banner_title">Trivia Astronómica</string>
+
+    <string name="help_one_day_ago_message">Debido a la ubicación de la línea internacional de cambio de fecha, los países y territorios que están al oeste de esta línea (en la región del Pacífico Oeste) experimentan un nuevo día antes que en Estados Unidos. Estos lugares incluyen, pero no se limitan a:\n\nNueva Zelanda, Australia, Fiji, Tonga, Samoa, Islas Kiribati y parte de la Antártida que se encuentra dentro de la zona horaria correspondiente (UTC+13 y UTC+14)\n\nDebido a la rotación de la Tierra, estos lugares entran en un nuevo día antes que Estados Unidos y la mayoría de los otros países del mundo. Sin embargo, los cambios de horario debido al horario de verano y otras consideraciones pueden afectar a esta lista, lo cual generará un error al consultar la foto del día que aún no llega.\n\nSi experimentas el error 404 al cargar la foto del día, prueba activando esta opción que descontará un día a la fecha actual.</string>
+    <string name="one_day_ago_alert_dialog">Un Día Atrás</string>
+    <string name="ok_alert_dialog">Entendido</string>
+    <string name="go_trivia_img_content">Accede a la trivia</string>
+    <string name="tv_score">10/10</string>
+    <string name="tv_quotes">Aquí se mostrarán frases inspiradoras relacionadas a la ciencia.</string>
+    <string name="home_drawer">Home</string>
+    <string name="news_img_content">Noticias</string>
+    <string name="cv_news_title">Alerta: Ebullición Global</string>
+    <string name="apod_description">El Astronomy Picture of the Day (APOD) es un sitio web mantenido conjuntamente por la NASA y la Universidad Tecnológica de Michigan. \n\nSegún la información en el sitio web, desde 1995 se ha presentado una imagen o fotografía diferente del universo cada día, acompañada de una breve explicación escrita por un astrónomo profesional.\n\nAquí tienes la posibilidad de explorar todas las imágenes publicadas hasta hoy.</string>
+    <string name="apod_help_title">APOD</string>
+    <string name="dialog_rate_title">¿Disfrutaste Stellar View?</string>
+    <string name="dialog_rate_text">Por favor, considera puntuar la app en la Play Store</string>
+    <string name="dialog_rate_now">Puntuar ahora</string>
+    <string name="dialog_rate_later">Más tarde</string>
+
+    <!-- Frases  -->
+    <string-array name="scientific_quotes">
+        <item>\"Nada en la vida es para ser temido, es sólo para ser comprendido. Ahora es el momento de entender más, de modo que podamos temer menos.\" - Marie Curie</item>
+        <item>\"Me parece haber sido sólo un niño jugando en la orilla del mar, divirtiéndose y buscando una piedra más lisa o una concha más bonita de lo normal, mientras el gran océano de la verdad yacía ante mis ojos con todo por descubrir.\" - Isaac Newton</item>
+        <item>\"Se humilde, estás hecho de tierra. Se noble, estás hecho de estrellas.\" - Proverbio Serbio</item>
+        <item>\"Lo que conocemos es una gota, lo que ignoramos es un océano." - Isaac Newton</item>
+        <item>\"La ciencia progresa mejor cuando las observaciones nos obligan a alterar nuestras preconcepciones.\" - Vera Rubin</item>
+        <item>\"He amado a las estrellas con demasiado cariño como para tener miedo de la noche.\" - Galileo Galilei</item>
+        <item>\"A los hombres les encanta maravillarse. Esto es la semilla de la ciencia.\" - Ralph Waldo Emerson</item>
+        <item>\"Equipado con sus cinco sentidos, el hombre explora el universo a su alrededor y a esto lo llama la aventura de la ciencia.\" - Edwin Hubble</item>
+        <item>\"Cada frase que pronuncio no puede considerarse una afirmación sino una pregunta.\" - Neils Bohr</item>
+        <item>\"La ciencia más útil es aquella cuyo fruto es el más comunicable.\" - Leonardo Da Vinci</item>
+        <item>\"El aspecto más triste de la vida es que la ciencia reúne el conocimiento más rápidamente que la sociedad la sabiduría.\" - Isaac Asimov</item>
+        <item>\"En la ciencia la única verdad sagrada, es que no hay verdades sagradas.\" - Carl Sagan</item>
+        <item>\"Apolo, el dios de la medicina, solía enviar las enfermedades. En el principio, los dos oficios eran uno solo, y sigue siendo así.\" - Anónimo</item>
+        <item>\"La ciencia es una empresa que sólo puede florecer si se pone la verdad por delante de la nacionalidad, la etnia, la clase y el color.\" - John C. Polanyi</item>
+        <item>\"La ciencia que se aparta de la justicia, más que ciencia debe llamarse astucia.\" - Cicerón</item>
+        <item>\"En cuestiones de ciencia, la autoridad de miles no vale más que el humilde razonamiento de un único individuo.\" - Galileo Galilei</item>
+        <item>\"La única posibilidad de descubrir los límites de lo posible es aventurarse un poco más allá de ellos, hacia lo imposible.\" - Arthur C. Clarke</item>
+        <item>\"Estoy convencido de que la autoeducación es el único tipo de educación que existe.\" - Isaac Asimov</item>
+        <item>\"No divulgar la ciencia me parece perverso. Cuando uno se enamora, se lo quiere gritar al mundo.\" - Carl Sagan</item>
+        <item>\"Todos los niños empiezan siendo científicos por naturaleza, y luego les sacamos de sus casillas. Unos pocos pasan por el sistema con su asombro y entusiasmo por la ciencia intactos.\" - Carl Sagan</item>
+        <item>\"Vivimos en una sociedad absolutamente dependiente de la ciencia y la tecnología y, sin embargo, hemos organizado inteligentemente las cosas para que casi nadie entienda la ciencia y la tecnología. Esa es una clara receta para el desastre.\" - Carl Sagan</item>
+        <item>\"La imaginación a menudo nos lleva a mundos que nunca fueron. Pero sin ella no vamos a ninguna parte.\" - Carl Sagan</item>
+        <item>\"El fin de la ciencia no es abrir la puerta al saber eterno, sino poner límite al error eterno.\" - Galileo Galilei</item>
+        <item>\"La ignorancia es la madre de la maldad y de todos los demás vicios.\" - Galileo Galilei</item>
+        <item>\"La mayor sabiduría que existe es conocerse a uno mismo.\" - Galileo Galilei</item>
+        <item>\"Nunca he conocido a una persona tan ignorante que me resultase imposible aprender algo de ella.\" - Galileo Galilei</item>
+        <item>\"Sea menos curioso acerca de las personas y más curioso acerca de las ideas.\" - Marie Curie</item>
+        <item>\"Ningún cerebro está en buena forma sin una meta constante.\" - Rita Levi-Montalcini</item>
+        <item>\"La historia de la ciencia nos demuestra que las teorías son perecederas.\" - Nikola Tesla</item>
+    </string-array>
+
+    <string name="onu_statement">La afirmación de la ONU sobre el cambio de \"calentamiento global\" a \"ebullición global\" sugiere una intensificación y aceleración de los efectos del cambio climático.</string>
+    <string name="introduction">La "ebullición global" en un contexto climático indica un punto crítico que antecede a eventos climáticos extremos y devastadores. A pesar de intentos por reducir emisiones de gases de efecto invernadero, estas siguen en aumento, exacerbando fenómenos como olas de calor, inundaciones e incendios forestales.\n\nEstos eventos no solo dañan la naturaleza, sino que también impactan a la sociedad en términos de salud, infraestructura y economía.  Ante esta crisis, es esencial una acción global enfocada en la mitigación y adaptación para asegurar un futuro sostenible.</string>
+    <string name="content1">El cambio climático, intensificado por acciones humanas como la quema de combustibles fósiles, es una preocupación central en la ciencia contemporánea. Existen diversas fuentes que confirman su existencia y gravedad. Entre las más destacadas se encuentran el Informe del IPCC, las investigaciones de la NOAA y la NASA, y diversos informes de organizaciones como la WMO y la Academia Nacional de Ciencias de EE.UU. \n\nEstas fuentes, junto con artículos científicos y ONGs, ofrecen una vasta información y evidencia sobre este fenómeno. </string>
+    <string name="content2">La lucha contra el calentamiento global exige esfuerzos tanto colectivos como individuales. A nivel colectivo, es crucial implementar políticas de reducción de emisiones, invertir en energías renovables, fomentar la eficiencia energética, y promover la reforestación y prácticas agrícolas sostenibles. La educación y la investigación en soluciones climáticas también son esenciales. \n\nA nivel individual, podemos contribuir reduciendo, reutilizando, reciclando, usando energía y agua eficientemente, optando por transportes sostenibles, reduciendo el consumo de carne, especialmente de vacuno, apoyando políticas y empresas ecológicas y participando en reforestación. Cada acción suma al esfuerzo global por un futuro más sostenible.</string>
+    <string name="news_title">Alerta: Ebullición Global</string>
+    <string name="news_subtitle2">Algunas personas creen que el cambio climático no es real o que el ser humano no es el responsable directo</string>
+    <string name="news_subtitle3">¡Debemos tomar acción!</string>
+    <string name="new_img_content">Una imagen de un hervidor con forma de globo terraqueo.</string>
+    <string name="news_autor">Javier Fuentes \n\n2023-08-08\u0020</string>
+
+</resources>
