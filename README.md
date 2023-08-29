@@ -3,7 +3,7 @@
 
 ![github-banner](https://github.com/JavFuentes/StellarView/assets/122236197/d33bd31d-b49d-49aa-884d-3dcdaebdd973)
 
-"Stellar View" es una aplicación Android enfocada en promover el interés en la educación astronómica. 
+Stellar View es una aplicación Android enfocada en promover el interés en la educación astronómica. 
 
 ## Story Telling: Vista Estelar 🔭
 <p>“Vivimos en una sociedad profundamente dependiente de la ciencia y la tecnología, y en la que nadie sabe nada de estos temas”. 
@@ -15,7 +15,7 @@ Esta frase del gran astrónomo, Carl Sagan, habla de un problema que solo se ha 
 <p>"Vista Estelar" es más que una simple aplicación, es una puerta hacia el vasto y asombroso cosmos que nos rodea. Está diseñada para inspirar, educar y fomentar la pasión por la astronomía en personas de todas las edades y orígenes. Juntos, podemos desvelar los misterios del universo y permitir que todos se maravillen con la belleza y la grandeza del cosmos que nos rodea.</p>
 <br>
 
-![github-screens](https://github.com/JavFuentes/StellarView/assets/122236197/d68e24fd-117e-4e8a-b3e1-c8fa873537eb)
+![github-screens](https://github.com/JavFuentes/StellarView/assets/122236197/d3935dd6-ce8b-4e68-a83c-067cdd6ddc6c)
 <br>
 ## Problemáticas identificadas 🚩
 
@@ -31,16 +31,40 @@ Desde su concepción, el proyecto ha incorporado una trivia astronómica que no 
 
 La app además, permite a usuarios explorar fotografías impactantes de cuerpos celestes. Esta característica es posible gracias al consumo de una API proporcionada por la NASA, conocida como "APOD" (Astronomy Picture of the Day) para obtener imágenes astronómicas fascinantes con interesantes descripciones escritas por astrónomos profesionales. 
 
-Durante el desarrollo de Stellar View, apliqué los siguientes recursos y técnicas:
+Stellar View está construido con:
 
 - Arquitectura MVVM (Modelo-Vista-Vista Modelo): Adopté este patrón para asegurar un código organizado, escalable y fácil de mantener.
+  
 - Biblioteca Room: Implementé dos bases de datos SQLite usando Room, que gestionan tanto las imágenes favoritas de los usuarios como el conjunto de preguntas y respuestas de la trivia.
-- Firebase: Integré esta plataforma para recolectar y analizar estadísticas telemétricas, ofreciéndome valiosos insights sobre la interacción de los usuarios con la trivia. (El presente repositorio no incluye esta característica para mantener la seguridad de la aplicación publicada)
+  
+- Firebase: Integré esta plataforma para recolectar y analizar estadísticas telemétricas, ofreciéndome valiosos insights sobre la interacción de los usuarios con la trivia. (El presente repositorio no incluye esta característica, para así mantener la seguridad de la aplicación publicada)
+  
 - Dagger Hilt: Opté por esta herramienta para la inyección de dependencias, facilitando la gestión y optimización de recursos a lo largo de la aplicación.
 
-La creación de Stellar View ha sido un reto enriquecedor que me ha permitido fortalecer y expandir mis competencias en el ámbito del desarrollo de aplicaciones móviles.
+- Multiidioma: Con la excepción de las descripciones de las imágenes de la NASA, que están en inglés, la aplicación soporta 3 idiomas: Inglés, español e italiano, dependiendo del idioma que tengas configurado en tu teléfono.
+
+
 <br><br>
-[Descarga la App desde la Play Store](https://play.google.com/store/apps/details?id=com.astronomy.stellar_view)
+
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.astronomy.stellar_view">
+    <img src="https://github.com/JavFuentes/StellarView/assets/122236197/a7e3b6c4-b55f-4ed7-bc3e-305864807c6d" width="30%" alt="Descargar en Google Play">
+  </a>
+</div>
+
+<br>
+
+## MIT License 📜
+
+Copyright (c) 2023 Javier Fuentes
+
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados a Stellar View, para tratar el Software sin restricción, incluyendo, sin limitación, los derechos de uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta de copias del Software, y para permitir a las personas a las que se les proporcione el Software hacerlo, sujeto a las siguientes condiciones:
+
+El aviso de derechos de autor anterior y este aviso de permisos se incluirán en todas las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMO, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, DERIVADAS DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO O OTROS NEGOCIOS EN EL SOFTWARE.
+
+Para obtener más información sobre el autor y sus proyectos, visite http://javierfuentes.dev
 
 
 
