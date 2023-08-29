@@ -45,7 +45,11 @@ Stellar View está construido con:
 - Multiidioma: Con la excepción de las descripciones de las imágenes de la NASA, que están en inglés, la aplicación soporta 3 idiomas: Inglés, español e italiano, dependiendo del idioma que tengas configurado en tu teléfono.
 <br>
 
-[![github-playstore](https://github.com/JavFuentes/StellarView/assets/122236197/5fe7fb79-41ca-4fbf-ab2d-d3eaa7184f01)](https://play.google.com/store/apps/details?id=com.astronomy.stellar_view)
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.astronomy.stellar_view">
+    <img src="https://i.ibb.co/PtGSG29/github-playstore.png" alt="Descargar en Google Play" width="60%">
+  </a>
+</div>
 
 <br>
 
