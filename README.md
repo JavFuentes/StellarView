@@ -43,14 +43,9 @@ Stellar View está construido con:
 - Dagger Hilt: Opté por esta herramienta para la inyección de dependencias, facilitando la gestión y optimización de recursos a lo largo de la aplicación.
 
 - Multiidioma: Con la excepción de las descripciones de las imágenes de la NASA, que están en inglés, la aplicación soporta 3 idiomas: Inglés, español e italiano, dependiendo del idioma que tengas configurado en tu teléfono.
-
 <br>
 
-<div align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.astronomy.stellar_view">
-    <img src="https://github.com/JavFuentes/StellarView/assets/122236197/a7e3b6c4-b55f-4ed7-bc3e-305864807c6d" width="30%" alt="Descargar en Google Play">
-  </a>
-</div>
+[![github-playstore](https://github.com/JavFuentes/StellarView/assets/122236197/5fe7fb79-41ca-4fbf-ab2d-d3eaa7184f01)](https://play.google.com/store/apps/details?id=com.astronomy.stellar_view)
 
 <br>
 
