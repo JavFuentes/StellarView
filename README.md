@@ -16,7 +16,8 @@ Esta frase del gran astrónomo, Carl Sagan, habla de un problema que solo se ha 
 <br>
 
 ![github-screens](https://github.com/JavFuentes/StellarView/assets/122236197/d3935dd6-ce8b-4e68-a83c-067cdd6ddc6c)
-<br>
+
+<br><br>
 ## Problemáticas identificadas 🚩
 
 1. Falta de acceso a recursos educativos sobre astronomía en comunidades desfavorecidas.
