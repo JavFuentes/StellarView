@@ -47,7 +47,7 @@ Stellar View está construido con:
 
 <div align="center">
   <a href="https://play.google.com/store/apps/details?id=com.astronomy.stellar_view">
-    <img src="https://i.ibb.co/PtGSG29/github-playstore.png" alt="Descargar en Google Play" width="60%">
+    <img src="https://i.ibb.co/PtGSG29/github-playstore.png" alt="Descargar en Google Play" width="80%">
   </a>
 </div>
 
