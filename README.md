@@ -1,7 +1,7 @@
 
 # <div align="center">StellarView</div>
 
-![github-banner](https://github.com/JavFuentes/StellarView/assets/122236197/d33bd31d-b49d-49aa-884d-3dcdaebdd973)
+![github-banner](https://github.com/JavFuentes/StellarView/assets/122236197/bd1fbe45-0ca0-40be-a13c-e42d182290ff)
 
 Stellar View es una aplicación Android enfocada en promover el interés en la astronomía. 
 <br><br>
