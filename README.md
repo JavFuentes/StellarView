@@ -181,7 +181,7 @@ Si este proyecto te ayudó a aprender sobre desarrollo Android o astronomía, co
 ---
 
 <div align="center">
-  <i>"Vivimos en una sociedad exquisitamente dependiente de la ciencia y la tecnología, en la que casi nadie sabe nada sobre ciencia y tecnología."</i>
+  <i>"Vivimos en una sociedad profundamente dependiente de la ciencia y la tecnología y en la que casi nadie sabe nada de estos temas."</i>
   <br>
   <b>- Carl Sagan</b>
 </div>
