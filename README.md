@@ -2,172 +2,187 @@
 
 <div align="center">
   <img src="https://github.com/JavFuentes/StellarView/assets/122236197/bd1fbe45-0ca0-40be-a13c-e42d182290ff" alt="StellarView Banner" width="100%">
-  
-  **An educational Android app that brings the wonders of astronomy to everyone**
-  
-  [![Google Play](https://img.shields.io/badge/Google_Play-Download-green?style=for-the-badge&logo=google-play)](https://play.google.com/store/apps/details?id=com.astronomy.stellar_view)
+
+  **Una app educativa para Android que trae las maravillas de la astronomía a todos**
+
+  [![Google Play](https://img.shields.io/badge/Google_Play-Descargar-green?style=for-the-badge&logo=google-play)](https://play.google.com/store/apps/details?id=com.astronomy.stellar_view)
   [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
   [![Android](https://img.shields.io/badge/Platform-Android-brightgreen.svg?style=for-the-badge&logo=android)](https://android.com)
 </div>
 
-## 📱 About
+## 📱 Acerca de
 
-StellarView is an educational Android application designed to inspire curiosity about astronomy and space science. Whether you're a student, astronomy enthusiast, or Android developer looking to learn, this app serves as both an engaging educational tool and a comprehensive code example.
+StellarView es una aplicación educativa para Android diseñada para inspirar curiosidad sobre la astronomía y las ciencias del espacio. Ya seas estudiante, entusiasta de la astronomía o desarrollador Android, esta app es tanto una herramienta educativa atractiva como un ejemplo completo de código.
 
-### 🎯 Educational Goals
-- **For Astronomy Enthusiasts**: Explore NASA's daily astronomical images, test knowledge with interactive trivia, and discover the cosmos
-- **For Android Developers**: Learn modern Android development patterns, architecture, and best practices through real-world implementation
+### 🎯 Objetivos Educativos
 
-## ✨ Features
+- **Para Entusiastas de la Astronomía**: Explora las imágenes astronómicas diarias de la NASA, pon a prueba tus conocimientos con trivia interactiva y descubre el cosmos.
+- **Para Desarrolladores Android**: Aprende patrones modernos de desarrollo Android, arquitectura y buenas prácticas mediante una implementación real.
 
-🖼️ **NASA APOD Integration** - Daily astronomy pictures with professional descriptions  
-🧠 **Interactive Astronomy Trivia** - Test and expand your cosmic knowledge  
-⭐ **Favorites System** - Save and organize your favorite astronomical discoveries  
-🌙 **Dark/Light Theme** - Comfortable viewing for day and night stargazing  
-🌍 **Multi-language Support** - Available in English, Spanish, and Italian  
-🎵 **Sound Effects** - Enhanced user experience with audio feedback  
+## ✨ Características
+
+🖼️ **Integración con NASA APOD** - Imágenes astronómicas diarias con descripciones profesionales\
+🧠 **Trivia Interactiva de Astronomía** - Pon a prueba y expande tu conocimiento cósmico\
+⭐ **Sistema de Favoritos** - Guarda y organiza tus descubrimientos astronómicos favoritos\
+🌙 **Tema Claro/Oscuro** - Visualización cómoda para el día y la noche\
+🌍 **Soporte Multilenguaje** - Disponible en inglés, español e italiano\
+🎵 **Efectos de Sonido** - Experiencia mejorada con retroalimentación auditiva
 
 <div align="center">
-  <img src="https://github.com/JavFuentes/StellarView/assets/122236197/d3935dd6-ce8b-4e68-a83c-067cdd6ddc6c" alt="App Screenshots" width="80%">
+  <img src="https://github.com/JavFuentes/StellarView/assets/122236197/d3935dd6-ce8b-4e68-a83c-067cdd6ddc6c" alt="Capturas de pantalla" width="80%">
 </div>
 
-## 🏗️ Architecture & Technologies
+## 🏗️ Arquitectura y Tecnologías
 
-This project demonstrates modern Android development practices:
+Este proyecto demuestra prácticas modernas de desarrollo Android:
 
-### 📐 Architecture
-- **MVVM Pattern** - Clear separation of concerns
-- **Repository Pattern** - Clean data layer abstraction
-- **Navigation Component** - Single-activity architecture
-- **View Binding** - Type-safe view references
+### 📐 Arquitectura
 
-### 🛠️ Tech Stack
-- **Kotlin** - Modern Android development language
-- **XML Layouts + View Binding** - Traditional Android UI development (pre-Compose era)
-- **Room Database** - Local data persistence
-- **Retrofit** - NASA API integration
-- **Dagger Hilt** - Dependency injection
-- **Coroutines** - Asynchronous programming
-- **Material Design Components** - Modern UI components
-- **Lottie Animations** - Engaging user interactions
-- **Coil** - Image loading and caching
-- **Firebase** - Analytics and backend services
+- **Patrón MVVM** - Separación clara de responsabilidades
+- **Patrón Repository** - Abstracción limpia de la capa de datos
+- **Navigation Component** - Arquitectura de actividad única
+- **View Binding** - Referencias de vistas seguras y con tipado
 
-### 🌐 APIs & Data
-- **NASA APOD API** - Astronomy Picture of the Day
-- **Local SQLite** - Trivia questions and favorites storage
-- **Firebase Analytics** - User interaction insights (production only)
+### 🛠️ Tecnologías Utilizadas
 
-## 🚀 Getting Started
+- **Kotlin** - Lenguaje moderno para desarrollo Android
+- **Layouts XML + View Binding** - Desarrollo de UI tradicional (antes de Compose)
+- **Room Database** - Persistencia de datos local
+- **Retrofit** - Integración con API de la NASA
+- **Dagger Hilt** - Inyección de dependencias
+- **Coroutines** - Programación asíncrona
+- **Material Design Components** - Componentes modernos de UI
+- **Lottie Animations** - Interacciones visuales atractivas
+- **Coil** - Carga y almacenamiento de imágenes
+- **Firebase** - Servicios de backend y analíticas
 
-### Prerequisites
-- Android Studio Arctic Fox or newer
-- Android SDK 30+
+### 🌐 APIs y Datos
+
+- **NASA APOD API** - Imagen Astronómica del Día
+- **SQLite local** - Almacenamiento de preguntas de trivia y favoritos
+- **Firebase Analytics** - Métricas de uso (solo en producción)
+
+## 🚀 Comenzar
+
+### Requisitos Previos
+
+- Android Studio Arctic Fox o superior
+- SDK de Android 30+
 - Java 17
 
-### Installation
-1. Clone the repository
+### Instalación
+
+1. Clona el repositorio
+
 ```bash
 git clone https://github.com/JavFuentes/StellarView.git
 ```
 
-2. Open in Android Studio
+2. Ábrelo en Android Studio
 
-3. Sync project with Gradle files
+3. Sincroniza el proyecto con los archivos Gradle
 
-4. Run on device or emulator
+4. Ejecuta en un dispositivo o emulador
 
-### 🔑 NASA API Setup
-1. Get your free API key from [NASA Open Data Portal](https://api.nasa.gov/)
-2. Add to your `local.properties`:
+### 🔑 Configuración de la API de la NASA
+
+1. Obtén tu clave gratuita desde el [Portal de Datos Abiertos de la NASA](https://api.nasa.gov/)
+2. Agrégala a tu `local.properties`:
+
 ```properties
-NASA_API_KEY="your_api_key_here"
+NASA_API_KEY="tu_clave_aqui"
 ```
 
-## 📚 Learning Resources
+## 📚 Recursos de Aprendizaje
 
-### For Android Developers
-- **Clean Architecture Implementation** - See how MVVM, Repository pattern, and DI work together
-- **Traditional XML Layouts + View Binding** - Learn classic Android UI development before Jetpack Compose
-- **Navigation Component** - Single-activity architecture with fragments
-- **Database Management** - Room migrations, DAOs, and data relationships
-- **API Integration** - Retrofit setup, error handling, and data transformation
-- **Image Loading** - Coil implementation for efficient image caching
-- **Dependency Injection** - Dagger Hilt setup and best practices
+### Para Desarrolladores Android
 
-### For Astronomy Enthusiasts
-- **NASA's Daily Images** - Professional astronomical photography with expert explanations
-- **Interactive Learning** - Trivia covering solar system, galaxies, and cosmic phenomena
-- **Progressive Difficulty** - Content suitable for beginners to advanced learners
+- **Implementación de Arquitectura Limpia** - MVVM, Repository y DI funcionando en conjunto
+- **Diseño con XML + View Binding** - Aprende desarrollo de interfaces antes de Jetpack Compose
+- **Navigation Component** - Arquitectura de actividad única con fragments
+- **Gestión de Base de Datos** - Migraciones de Room, DAOs y relaciones de datos
+- **Integración con API** - Configuración de Retrofit, manejo de errores y transformación de datos
+- **Carga de Imágenes** - Uso de Coil para caché y optimización
+- **Inyección de Dependencias** - Configuración y mejores prácticas con Hilt
 
-## 🤝 Contributing
+### Para Entusiastas de la Astronomía
 
-Contributions are welcome! This project is perfect for:
-- **Beginner developers** learning Android development
-- **Astronomy educators** wanting to add educational content
-- **Open source enthusiasts** looking to contribute to science education
+- **Imágenes Diarias de la NASA** - Fotografía astronómica con explicaciones profesionales
+- **Aprendizaje Interactivo** - Trivia sobre sistema solar, galaxias y fenómenos cósmicos
+- **Dificultad Progresiva** - Contenido adecuado para todos los niveles
 
-### Areas for Contribution
-- 🌟 Additional astronomy trivia questions
-- 🌍 More language translations
-- 🎨 UI/UX improvements
-- 🧪 Test coverage expansion
-- 📚 Educational content enhancement
+## 🤝 Contribuciones
 
-## 📱 Download
+¡Las contribuciones son bienvenidas! Este proyecto es ideal para:
+
+- **Desarrolladores principiantes** que deseen aprender Android
+- **Educadores en astronomía** que quieran sumar contenido
+- **Entusiastas del código abierto** interesados en educación científica
+
+### Áreas para Contribuir
+
+- 🌟 Nuevas preguntas de trivia astronómica
+- 🌍 Traducciones a más idiomas
+- 🎨 Mejoras de UI/UX
+- 🧪 Expansión de cobertura de pruebas
+- 📚 Enriquecimiento del contenido educativo
+
+## 📱 Descargar
 
 <div align="center">
   <a href="https://play.google.com/store/apps/details?id=com.astronomy.stellar_view">
-    <img src="https://i.ibb.co/PtGSG29/github-playstore.png" alt="Download on Google Play" width="80%">
+    <img src="https://i.ibb.co/PtGSG29/github-playstore.png" alt="Descargar en Google Play" width="80%">
   </a>
 </div>
 
-## 📄 License
+## 📄 Licencia
 
 ```
-MIT License
+Licencia MIT
 
 Copyright (c) 2023 Javier Fuentes
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Se otorga permiso, sin costo, a cualquier persona que obtenga una copia
+de este software y archivos de documentación asociados (el "Software"), para tratar
+con el Software sin restricción, incluidos sin limitación los derechos a usar,
+copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender
+copias del Software, y permitir a las personas a quienes se les proporcione el
+Software que lo hagan, sujeto a las siguientes condiciones:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+El aviso de derechos de autor anterior y este aviso de permiso se incluirán en todas
+las copias o partes sustanciales del Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA, INCLUYENDO PERO NO LIMITADA A LAS GARANTÍAS DE COMERCIABILIDAD,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES
+O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES POR NINGUNA RECLAMACIÓN, DAÑO U OTRA
+RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, AGRAVIO O DE OTRA MANERA,
+DERIVADA DE, O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN
+EL SOFTWARE.
 
-For more information about the author and his projects, please visit http://javierfuentes.dev
+Para más información sobre el autor y sus proyectos, visita http://javierfuentes.dev
 ```
 
-## 🌟 Support
+## 🌟 Apoyo
 
-If you found this project helpful for learning Android development or astronomy, consider:
+Si este proyecto te ayudó a aprender sobre desarrollo Android o astronomía, considera:
 
 <a href='https://ko-fi.com/I2I2OPHE0' target='_blank'>
-  <img height='36' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' />
+  <img height='36' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Cómprame un café en ko-fi.com' />
 </a>
 
-## 👨‍💻 Author
+## 👨‍💻 Autor
 
-**Javier Fuentes** - *Android Developer & Astronomy Enthusiast*
-- Website: [javierfuentes.dev](http://javierfuentes.dev)
+**Javier Fuentes** - *Desarrollador Android y Entusiasta de la Astronomía*
+
+- Sitio web: [javierfuentes.dev](http://javierfuentes.dev)
 - GitHub: [@JavFuentes](https://github.com/JavFuentes)
 
 ---
 
 <div align="center">
-  <i>"We live in a society exquisitely dependent on science and technology, in which hardly anyone knows anything about science and technology."</i>
+  <i>"Vivimos en una sociedad exquisitamente dependiente de la ciencia y la tecnología, en la que casi nadie sabe nada sobre ciencia y tecnología."</i>
   <br>
   <b>- Carl Sagan</b>
 </div>
+
