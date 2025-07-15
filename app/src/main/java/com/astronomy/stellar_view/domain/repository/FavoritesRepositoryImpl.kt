@@ -1,8 +1,8 @@
 package com.astronomy.stellar_view.domain.repository
 
 import com.astronomy.stellar_view.data.local.photo.FavoritesDatabase
-import com.astronomy.stellar_view.data.local.toPhotoDomain
-import com.astronomy.stellar_view.data.local.toPhotoEntity
+import com.astronomy.stellar_view.data.mapper.toPhotoDomain
+import com.astronomy.stellar_view.data.mapper.toPhotoEntity
 import com.astronomy.stellar_view.domain.model.Photo
 import kotlinx.coroutines.flow.map
 

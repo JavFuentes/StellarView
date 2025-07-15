@@ -1,0 +1,6 @@
+<resources>
+    <!-- Márgenes para system bars -->
+    <dimen name="system_bar_margin">24dp</dimen>
+    <dimen name="toolbar_margin_top">8dp</dimen>
+    <dimen name="fragment_margin_bottom">16dp</dimen>
+</resources>

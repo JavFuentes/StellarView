@@ -47,9 +47,7 @@ class ApodFragment : BaseFragment<FragmentApodBinding>() {
             imgTodayApod.setImageResource(R.drawable.default_image)
 
             val savedDate = prefSelectedDate.getString(SELECTED_DATE, null)
-            val date: String = savedDate?.let {
-                it
-            } ?: run {
+            val date: String = savedDate ?: run {
                 val daysBack = prefDaysBack.getInt(DAYS_BACK, 0)
                 val calendar = Calendar.getInstance()
                 calendar.add(Calendar.DATE, -daysBack)

@@ -10,8 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.astronomy.stellar_view.R
 import com.astronomy.stellar_view.ui.base.BaseFragment
 import com.astronomy.stellar_view.databinding.FragmentGameTriviaBinding
@@ -86,6 +86,9 @@ class TriviaGameFragment : BaseFragment<FragmentGameTriviaBinding>() {
                 binding.btnOptionC.text = options[2]
                 binding.btnOptionD.text = options[3]
 
+                // Reinicia la UI para la nueva pregunta
+                resetUIForNewQuestion()
+
                 val okAnimationView = binding.okAnimation
                 val wrongAnimationView = binding.wrongAnimation
 
@@ -138,28 +141,21 @@ class TriviaGameFragment : BaseFragment<FragmentGameTriviaBinding>() {
                             val correctAnswersCounter = viewModel.getCorrectAnswersCounter(categoryName)
 
                             if (answeredQuestionsCounter > 10) {
-                                val newFragment = TriviaResultFragment()
-
                                 val args = Bundle()
                                 args.putInt("correctAnswers", correctAnswersCounter)
                                 args.putString("categoryKey", categoryNameKey)
-                                newFragment.arguments = args
-
-                                val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-                                transaction.replace(R.id.mainContainer, newFragment)
-                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                transaction.commit()
+                                findNavController().navigate(R.id.action_triviaGameFragment_to_triviaResultFragment, args)
 
                                 // Reinicia el juego para la nueva ronda
                                 viewModel.onNewRoundStarted(categoryName)
                             }
                             else {
-                                // Recarga el fragmento del juego para la siguiente pregunta
-                                val newFragment = TriviaGameFragment()
-                                val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-                                transaction.replace(R.id.mainContainer, newFragment)
-                                transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                transaction.commit()
+                                // Obtiene una nueva pregunta sin reemplazar el fragmento
+                                viewModel.getRandomQuestion(categoryNumber.toString(), lang)
+
+                                // Actualiza el contador para la nueva pregunta
+                                val newCounter = viewModel.getAnsweredQuestionsCounter(categoryName)
+                                binding.tvCounter.text = newCounter.toString()
                             }
                         }, 3000)
                     }
@@ -169,6 +165,24 @@ class TriviaGameFragment : BaseFragment<FragmentGameTriviaBinding>() {
                 Snackbar.make(binding.root, getString(R.string.local_db_error_alert), Snackbar.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun resetUIForNewQuestion() {
+        // Rehabilita los botones
+        binding.btnOptionA.isClickable = true
+        binding.btnOptionB.isClickable = true
+        binding.btnOptionC.isClickable = true
+        binding.btnOptionD.isClickable = true
+
+        // Esconde las animaciones
+        binding.okAnimation.visibility = View.GONE
+        binding.wrongAnimation.visibility = View.GONE
+
+        // Reinicia los colores de los botones
+        binding.btnOptionA.backgroundTintList = null
+        binding.btnOptionB.backgroundTintList = null
+        binding.btnOptionC.backgroundTintList = null
+        binding.btnOptionD.backgroundTintList = null
     }
 
     // Esconde las animaciones al reanudar el fragmento

@@ -1,4 +1,4 @@
-package com.astronomy.stellar_view.data.local
+package com.astronomy.stellar_view.data.mapper
 
 import com.astronomy.stellar_view.data.local.photo.PhotoEntity
 import com.astronomy.stellar_view.domain.model.Photo

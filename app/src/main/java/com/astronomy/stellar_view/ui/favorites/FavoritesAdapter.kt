@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.astronomy.stellar_view.databinding.AdapterFavoritesItemBinding
 import com.astronomy.stellar_view.domain.model.Photo
+import androidx.core.view.isGone
 
 class FavoritesAdapter(
     private val onDelete: (Photo) -> Unit
@@ -34,7 +35,7 @@ class FavoritesAdapter(
             binding.btnDetails.setOnClickListener {
 
                 // Alternar la visibilidad del LinearLayout extendido al hacer clic en el botón de detalles
-                if (binding.extendedLinearLayout.visibility == View.GONE)
+                if (binding.extendedLinearLayout.isGone)
                     binding.extendedLinearLayout.visibility = View.VISIBLE
                 else
                     binding.extendedLinearLayout.visibility = View.GONE

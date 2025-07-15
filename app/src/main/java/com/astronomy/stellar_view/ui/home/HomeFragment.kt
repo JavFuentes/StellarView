@@ -19,155 +19,282 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+/**
+ * Fragmento principal de la aplicación StellarView que actúa como pantalla de inicio.
+ *
+ * Características principales:
+ * - Muestra la imagen astronómica del día (APOD)
+ * - Proporciona acceso rápido a secciones principales (Trivia, Noticias)
+ * - Muestra el progreso del usuario en las categorías de trivia mediante estrellas
+ * - Gestiona navegación hacia otras pantallas de la aplicación
+ *
+ * Este fragmento implementa el patrón MVVM y utiliza:
+ * - ViewBinding para acceso seguro a las vistas
+ * - ViewModel para manejo de datos y estados
+ * - Navigation Component para navegación entre fragmentos
+ * - SharedPreferences para persistencia de datos locales
+ */
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
-    // Constantes para las SharedPreferences
     companion object {
+        /**
+         * Clave para almacenar la fecha seleccionada en SharedPreferences.
+         */
         const val SELECTED_DATE = "selectedDate"
+
+        /**
+         * Clave para almacenar el número de días hacia atrás para la fecha APOD.
+         */
         const val DAYS_BACK = "daysBack"
+
+        /**
+         * Nombre del archivo SharedPreferences para datos generales de la app.
+         */
+        private const val SHARED_PREFS_NAME = "MySharedPrefs"
+
+        /**
+         * Formato de fecha estándar para las consultas APOD (YYYY-MM-DD).
+         */
+        private const val DATE_FORMAT = "%04d-%02d-%02d"
+
+        /**
+         * Prefijo para las claves de calificación por estrellas en SharedPreferences.
+         */
+        private const val STAR_RATING_PREFIX = "star_rating_"
     }
 
-    // ViewModel que controla los datos del PictureOfDay
+    /**
+     * ViewModel que controla los datos de la imagen astronómica del día.
+     */
     private val viewModel: PictureOfDayViewModel by viewModels()
 
-    // Preferencias y editores para almacenar y editar datos localmente
+    /**
+     * SharedPreferences para almacenar datos generales de la aplicación.
+     */
     private lateinit var sharedPreferences: SharedPreferences
+
+    /**
+     * Editor para modificar las preferencias de fecha seleccionada.
+     */
     private lateinit var selectedDatePrefEdit: SharedPreferences.Editor
+
+    /**
+     * Editor para modificar las preferencias de días hacia atrás.
+     */
     private lateinit var daysBackPrefEdit: SharedPreferences.Editor
+
+    /**
+     * Fecha actual formateada para consultas APOD.
+     */
     private lateinit var today: String
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-        // Obtiene las SharedPreferences
+        initializeSharedPreferences()
+        setupDateCalculation()
+        setupClickListeners()
+        loadTodayPhoto()
+        observeViewModelData()
+    }
+
+    /**
+     * Inicializa las SharedPreferences y sus editores para manejo de datos locales.
+     */
+    private fun initializeSharedPreferences() {
         val prefSelectedDate: SharedPreferences =
             requireActivity().getSharedPreferences(SELECTED_DATE, Context.MODE_PRIVATE)
         val prefDaysBack: SharedPreferences =
             requireActivity().getSharedPreferences(DAYS_BACK, Context.MODE_PRIVATE)
 
-        // Inicializa los editores para las SharedPreferences
         selectedDatePrefEdit = prefSelectedDate.edit()
         daysBackPrefEdit = prefDaysBack.edit()
-        sharedPreferences = requireActivity().getSharedPreferences("MySharedPrefs", Context.MODE_PRIVATE)
+        sharedPreferences = requireActivity().getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+    }
 
+    /**
+     * Calcula la fecha para mostrar la imagen APOD basándose en los días hacia atrás configurados.
+     * Permite al usuario ver imágenes de días anteriores si está configurado.
+     */
+    private fun setupDateCalculation() {
+        val prefDaysBack: SharedPreferences =
+            requireActivity().getSharedPreferences(DAYS_BACK, Context.MODE_PRIVATE)
+
+        val daysBack = prefDaysBack.getInt(DAYS_BACK, 0)
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DATE, -daysBack)
+
+        today = String.format(
+            Locale.getDefault(),
+            DATE_FORMAT,
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH) + 1,
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+
+        // Guarda la fecha seleccionada para uso en otros fragmentos
+        selectedDatePrefEdit.putString(SELECTED_DATE, today).apply()
+    }
+
+    /**
+     * Configura los listeners de click para los elementos principales de la interfaz.
+     * Cada sección principal tiene navegación hacia su fragmento correspondiente.
+     */
+    private fun setupClickListeners() {
         binding.apply {
-            // Configura la imagen por defecto
+            // Configura imagen por defecto mientras carga
             imgTodayApod.setImageResource(R.drawable.default_image)
 
-            // Calcula la fecha basada en cuántos días atrás se configuró
-            val daysBack = prefDaysBack.getInt(DAYS_BACK, 0)
-            val calendar = Calendar.getInstance()
-            calendar.add(Calendar.DATE, -daysBack)
-
-            val date = String.format(
-                Locale.getDefault(),
-                "%04d-%02d-%02d",
-                calendar.get(Calendar.YEAR),
-                calendar.get(Calendar.MONTH) + 1,
-                calendar.get(Calendar.DAY_OF_MONTH)
-            )
-
-            // Asigna la fecha actual
-            today = date
-
-            // Guarda la fecha seleccionada en las SharedPreferences
-            selectedDatePrefEdit.putString(SELECTED_DATE, date).apply()
-
-            // Click listener para el card view del APOD
+            // Navegación a detalles de la imagen astronómica del día
             cvToday.setOnClickListener {
-                playSelectSound() // Reproduce un sonido
-                findNavController().navigate(R.id.action_homeFragment_to_pictureOfDayFragment) // Navega a otro fragmento
+                playSelectSound()
+                findNavController().navigate(R.id.action_homeFragment_to_pictureOfDayFragment)
             }
 
-            // Click listeners para el card view de la trivia
+            // Navegación a las categorías de trivia astronómica
             cvTrivia.setOnClickListener {
                 playSelectSound()
                 findNavController().navigate(R.id.action_homeFragment_to_triviaCategoriesFragment)
             }
 
-            // Click listeners para el card view de las noticias
+            // Navegación a noticias astronómicas
             cvNews.setOnClickListener {
                 playSelectSound()
                 findNavController().navigate(R.id.action_homeFragment_to_newsFragment)
             }
         }
+    }
 
-        // Obtiene la foto basada en la fecha y observa los cambios
+    /**
+     * Inicia la carga de la imagen astronómica del día basándose en la fecha calculada.
+     */
+    private fun loadTodayPhoto() {
         viewModel.getPhotoBasedOnDate(today.trim())
+    }
+
+    /**
+     * Configura la observación de datos del ViewModel para actualizar la UI.
+     */
+    private fun observeViewModelData() {
         observePhoto()
         observeUiEvent()
     }
 
-    // Observa la foto del día y la muestra en la interfaz
+    /**
+     * Observa los cambios en la imagen astronómica del día y actualiza la interfaz.
+     * Carga la imagen usando Coil y actualiza el título correspondiente.
+     */
     private fun observePhoto() {
         viewModel.photoBasedOnDate.observe(viewLifecycleOwner) { photo ->
-            binding.imgTodayTitle.text = photo.title
-            binding.imgTodayApod.load(photo.url)
+            binding.apply {
+                imgTodayTitle.text = photo.title
+                imgTodayApod.load(photo.url)
+            }
         }
     }
 
-    // Observa eventos de la interfaz y realiza acciones correspondientes
+    /**
+     * Observa eventos de la UI del ViewModel para manejar estados de carga y errores.
+     * Gestiona la visualización de mensajes de error y indicadores de progreso.
+     */
     private fun observeUiEvent() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.todayPhotoEvent.collect { event ->
                 when (event) {
                     is PictureOfDayViewModel.UiTodayPhotoEvent.ShowSnackbar -> {
-                        Snackbar.make(requireView(), event.message, Snackbar.LENGTH_LONG).show() // Muestra un Snackbar
+                        Snackbar.make(requireView(), event.message, Snackbar.LENGTH_LONG).show()
                     }
                     is PictureOfDayViewModel.UiTodayPhotoEvent.ShowProgressBar -> {
-                        binding.pbLoading.isVisible = event.isLoading // Muestra/Oculta la barra de progreso
+                        binding.pbLoading.isVisible = event.isLoading
                     }
                 }
             }
         }
     }
 
-    // Función para reproducir sonido
-    private fun playSelectSound(){
+    /**
+     * Reproduce el efecto de sonido de selección para mejorar la experiencia de usuario.
+     */
+    private fun playSelectSound() {
         (activity as? SoundPlayable)?.playSoundEffect(requireContext())
     }
 
-    // Opciones del menú superior
+    /**
+     * Maneja las opciones del menú superior, incluyendo la funcionalidad de refrescar.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.refresh -> {
-                viewModel.getPhotoBasedOnDate(today.trim()) // Refresca la imagen del día
+                viewModel.getPhotoBasedOnDate(today.trim())
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
+    /**
+     * Actualiza las calificaciones por estrellas de las categorías de trivia cuando el fragmento se reanuda.
+     * Muestra el progreso visual del usuario en cada categoría mediante diferentes tipos de estrellas.
+     */
     override fun onResume() {
         super.onResume()
-        // Establece las valoraciones por estrellas para cada categoría basándose en SharedPreferences
-        setStarRatingForCategory("category_1", binding.starRatingCategory1, sharedPreferences)
-        setStarRatingForCategory("category_2", binding.starRatingCategory2, sharedPreferences)
-        setStarRatingForCategory("category_3", binding.starRatingCategory3, sharedPreferences)
-        setStarRatingForCategory("category_4", binding.starRatingCategory4, sharedPreferences)
-        setStarRatingForCategory("category_5", binding.starRatingCategory5, sharedPreferences)
-        setStarRatingForCategory("category_6", binding.starRatingCategory6, sharedPreferences)
+        updateAllStarRatings()
     }
 
-    // Función para establecer la valoración por estrellas en la interfaz
-    private fun setStarRatingForCategory(categoryKey: String, imageView: ImageView, sharedPreferences: SharedPreferences) {
-        val starRatingKey = "star_rating_$categoryKey"
+    /**
+     * Actualiza todas las calificaciones por estrellas de las categorías de trivia.
+     */
+    private fun updateAllStarRatings() {
+        val categories = listOf(
+            "category_1" to binding.starRatingCategory1,
+            "category_2" to binding.starRatingCategory2,
+            "category_3" to binding.starRatingCategory3,
+            "category_4" to binding.starRatingCategory4,
+            "category_5" to binding.starRatingCategory5,
+            "category_6" to binding.starRatingCategory6
+        )
 
-        // Selecciona el recurso drawable basándose en el valor guardado en SharedPreferences
-        val starDrawableId = when (sharedPreferences.getInt(starRatingKey, 0)) {
-            1 -> R.drawable.star_bronze
-            2 -> R.drawable.star_silver
-            3 -> R.drawable.star_gold
-            else -> R.drawable.star_empty
+        categories.forEach { (categoryKey, imageView) ->
+            setStarRatingForCategory(categoryKey, imageView, sharedPreferences)
+        }
+    }
+
+    /**
+     * Establece la imagen de calificación por estrellas para una categoría específica.
+     *
+     * Sistema de calificación:
+     * - 0: Estrella vacía (sin progreso)
+     * - 1: Estrella de bronce (3-4 respuestas correctas)
+     * - 2: Estrella de plata (5-9 respuestas correctas)
+     * - 3: Estrella de oro (10 respuestas correctas - perfecto)
+     *
+     * @param categoryKey Identificador único de la categoría de trivia
+     * @param imageView Vista de imagen donde mostrar la calificación
+     * @param sharedPreferences Preferencias donde se almacena el progreso del usuario
+     */
+    private fun setStarRatingForCategory(
+        categoryKey: String,
+        imageView: ImageView,
+        sharedPreferences: SharedPreferences
+    ) {
+        val starRatingKey = "$STAR_RATING_PREFIX$categoryKey"
+        val rating = sharedPreferences.getInt(starRatingKey, 0)
+
+        val starDrawableId = when (rating) {
+            1 -> R.drawable.star_bronze  // Bronce: Buen progreso
+            2 -> R.drawable.star_silver  // Plata: Muy buen progreso
+            3 -> R.drawable.star_gold    // Oro: Perfección alcanzada
+            else -> R.drawable.star_empty // Vacía: Sin progreso aún
         }
 
-        // Establece la imagen de la clasificación por estrellas
         imageView.setImageResource(starDrawableId)
     }
 
-    // Inicializa el binding para este fragmento
+    /**
+     * Inicializa el ViewBinding para acceso seguro a las vistas del fragmento.
+     */
     override fun initBinding(
         inflater: LayoutInflater,
         container: ViewGroup?

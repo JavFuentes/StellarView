@@ -1,17 +1,3 @@
-/*
-MIT License
-
-Copyright (c) 2023 Javier Fuentes
-
-Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados a Stellar View, para tratar el Software sin restricción, incluyendo, sin limitación, los derechos de uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta de copias del Software, y para permitir a las personas a las que se les proporcione el Software hacerlo, sujeto a las siguientes condiciones:
-
-El aviso de derechos de autor anterior y este aviso de permisos se incluirán en todas las copias o partes sustanciales del Software.
-
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMO, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, DERIVADAS DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO O OTROS NEGOCIOS EN EL SOFTWARE.
-
-Para obtener más información sobre el autor y sus proyectos, visite http://javierfuentes.dev
-*/
-
 package com.astronomy.stellar_view.ui.trivia
 
 import android.app.AlertDialog
@@ -19,21 +5,29 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.findNavController
 import com.astronomy.stellar_view.R
+import com.astronomy.stellar_view.data.FirebaseHandler
 import com.astronomy.stellar_view.interfaces.SoundPlayable
 import com.astronomy.stellar_view.ui.base.BaseFragment
 import com.astronomy.stellar_view.databinding.FragmentResultTriviaBinding
+import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class TriviaResultFragment : BaseFragment<FragmentResultTriviaBinding>() {
+
+    @Inject
+    lateinit var firebaseHandler: FirebaseHandler
 
     // SharedPreferences para obtener la puntuación
     private lateinit var sharedPreferences: SharedPreferences
@@ -120,17 +114,24 @@ class TriviaResultFragment : BaseFragment<FragmentResultTriviaBinding>() {
         // Configura el botón para jugar de nuevo
         binding.btnAgain.setOnClickListener {
             (activity as? SoundPlayable)?.playSoundEffect(requireContext())
-            val newFragment = TriviaGameFragment()
-            val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.mainContainer, newFragment)
-            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-            transaction.commit()
+            findNavController().navigate(R.id.action_triviaResultFragment_to_triviaGameFragment)
         }
 
         // Configura el botón para volver al fragmento de categorías
         binding.btnCategories.setOnClickListener {
             (activity as? SoundPlayable)?.playSoundEffect(requireContext())
-            findNavController().navigate(R.id.action_triviaGameFragment_to_triviaCategoriesFragment)
+            findNavController().navigate(R.id.action_triviaResultFragment_to_triviaCategoriesFragment)
+        }
+
+        // Actualiza la puntuación basada en SharedPreferences y la sube a Firebase si es necesario
+        val newScore = getUpdatedScoreFromSharedPreferences()
+        if (shouldUpdateScore(newScore)) {
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            currentUser?.let {
+                firebaseHandler.updateScoreInFirestore(it.uid, newScore)
+                updateScoreInSharedPreferences(newScore)
+                Log.d("TriviaResultFragment", "Se realizó una llamada a FireStore")
+            }
         }
     }
 
