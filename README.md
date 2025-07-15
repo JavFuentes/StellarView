@@ -93,6 +93,28 @@ git clone https://github.com/JavFuentes/StellarView.git
 NASA_API_KEY="tu_clave_aqui"
 ```
 
+
+## 🛠️ Configuración del Proyecto
+
+### Configuración de Firebase
+
+Este proyecto usa Firebase para autenticación y almacenamiento. 
+Sigue estos pasos si quieres implementar correctamente esta función:
+
+#### Configuración Completa (Para producción)
+1. Ve a [Firebase Console](https://console.firebase.google.com)
+2. Crea un nuevo proyecto o selecciona uno existente
+3. Agrega una app Android:
+   - **Nombre del paquete**: `com.astronomy.stellar_view`
+   - **Nombre de la app**: StellarView
+4. Descarga `google-services.json`
+5. Colócalo en la carpeta `app/`
+
+### ⚠️ Importante
+- El archivo `google-services-example.json` contiene datos ficticios
+- Funciona para compilar, pero Firebase no funcionará completamente
+- Para funcionalidad completa de Firebase, usa tu archivo real
+
 ## 📚 Recursos de Aprendizaje
 
 ### Para Desarrolladores Android
